@@ -593,7 +593,8 @@ MonoBehaviour:
   laZer: {fileID: 5807089194075191971}
   dmgMat: {fileID: 2100000, guid: f215b0b4486452940b98afc4e3decba1, type: 2}
   intMat: {fileID: 2100000, guid: 17b04a2870095974587ec0c3a98c09b5, type: 2}
-  damageFeedBack: {fileID: 0}
+  damageFeedBack: {fileID: 3853121755244936184, guid: b41695f9e07d88b4a853ae32d9c3ed03,
+    type: 3}
 --- !u!120 &5807089194075191971
 LineRenderer:
   m_ObjectHideFlags: 0
