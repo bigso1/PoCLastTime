@@ -23,7 +23,6 @@ public class MovingPlatformScript : MonoBehaviour, I_Triggerable
             index++;
             if (index == waypointz.Count) index = 0;
         }
-
         StartCoroutine(MoveThis());
     }
 

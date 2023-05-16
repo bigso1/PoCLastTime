@@ -29,23 +29,21 @@ public class BulletScript : Interactable
     {
         base.Update();
         MoveMe();
-        //transform.position = Vector3.Lerp(transform.position, dir, Time.deltaTime * moveSpeed);
-        //transform.position += dir * moveSpeed;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //var col = collision.gameObject.GetComponent<>()
         if (other.CompareTag("Player"))
         {
             PlayerLifeSystem.playerLife.TakeDmg(myDmg);
-
         }
         else if (other.gameObject.GetComponent<Enemies>())
         {
             other.gameObject.GetComponent<Enemies>().TakeDamage(myDmg*3);
         }
-        Destroy(this.gameObject);
+        else Destroy(gameObject);
+        Destroy(gameObject);
+        
     }
 
     public override void TriggeredInteraction()

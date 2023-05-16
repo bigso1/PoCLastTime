@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5421419349086675334}
   - component: {fileID: 5421419349086675333}
   - component: {fileID: 5421419349086675332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HorizontalPlatform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -47,8 +47,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 0.3, z: 4}
-  m_Center: {x: 0, y: 0.3, z: 0}
+  m_Size: {x: 4, y: 0.5, z: 4}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!65 &5421419349086675334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 5421419350013246589}
   - component: {fileID: 5421419350013246591}
   - component: {fileID: 5421419350013246590}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

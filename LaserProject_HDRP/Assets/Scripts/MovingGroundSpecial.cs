@@ -18,6 +18,7 @@ public class MovingGroundSpecial : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if(!other.CompareTag("Player")) return;
+        Debug.Log("out");
         other.transform.SetParent(null);
     }
 }

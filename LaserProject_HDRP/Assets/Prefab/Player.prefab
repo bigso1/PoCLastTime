@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 8519971113395552501}
   m_Layer: 0
   m_Name: GroundCheck
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,7 +305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6276729831506007143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -338,7 +338,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 45.9
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -534,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7033398434289275270}
   m_LocalRotation: {x: 0, y: 0.03489949, z: 0, w: 0.99939084}
-  m_LocalPosition: {x: 0.24, y: -0.15, z: 0.5}
+  m_LocalPosition: {x: 0.24, y: -0.2, z: 0.5}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.29999995}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: -9.81
   jumpHeight: 2
-  speed: 7
+  speed: 6
   groundCheck: {fileID: 8519971113395552501}
   groundDistance: -1
   groundMask:
