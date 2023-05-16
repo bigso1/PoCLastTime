@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7236341307583708774}
   m_Layer: 0
   m_Name: BouncyWall
-  m_TagString: Bouncy
+  m_TagString: Bouncer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

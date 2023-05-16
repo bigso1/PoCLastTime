@@ -41,11 +41,6 @@ public class LaserBeam
         {
             bounce -= 1;
             lazer.SetPosition(count, hits);
-            /*if (bounce <= 0)
-            {
-                laserHits.Remove(hits);
-                break;
-            }*/
             count++;
         }
     }
@@ -55,10 +50,6 @@ public class LaserBeam
         if (hitInfo.collider != null && Tags.CompareTags("Bouncer", hitInfo.transform.gameObject) && bounce>0)
         {
             bounce -= 1;
-            
-            
-            
-            
             Vector3 pos = hitInfo.point;
             Vector3 dir = Vector3.Reflect(direction, hitInfo.normal);
             
@@ -69,7 +60,6 @@ public class LaserBeam
             laserHits.Add(hitInfo.point);
             UpdateLaser();
         }
-
     }
     
     void CastRay(Vector3 position, Vector3 direct, LineRenderer laser, float rayRange)
@@ -77,8 +67,6 @@ public class LaserBeam
         laserHits.Add(position);
         Ray ray = new Ray(position, direct);
         RaycastHit hit;
-        //Debug.DrawRay(ray.origin, ray.direction*rayRange);
-//        Debug.Log(lastThingsTouched.Count);
         if (Physics.Raycast(ray, out hit, rayRange,DMGLaserBehav.Masks))
         {
             var interactable = hit.transform.GetComponent<Interactable>();
@@ -90,12 +78,8 @@ public class LaserBeam
                 {
                     interactable.touchedValue += 1f;
                     if (bullet != null) bullet.direction = direct;
-                    //targets.GetComponent<Interactable>().Touched(true);
                 }
             }
-
-            //Debug.Log(lastThingsTouched.Count);
-            //range -= hit.distance;
             CheckHits(hit, direct, laser);
         }
         else
@@ -106,31 +90,6 @@ public class LaserBeam
             lastThingsTouched.Clear();
         }
     }
-
-    // ---------------------not used -----------------------
     
-    void ResetTargets()
-    {
-        foreach (GameObject components in lastThingsTouched)
-        {
-            components.GetComponent<Interactable>().touche=false;
-            
-        }
-    }
-    bool CheckEligibility()
-    {
-        for (int i = 0; i < laserHits.Count-1; i++)
-        {
-            if (lastThingsTouched[i].GetComponent<Interactable>()) return true;
-        }
-        Debug.Log("atteint le foreach");
-        foreach (GameObject components in lastThingsTouched)
-        {
-            bool vanished =components.GetComponent<Interactable>();
-             
-            if (vanished) {components.GetComponent<Interactable>().touche = false;}
-        }
-        return false;
-    }
     
 }
